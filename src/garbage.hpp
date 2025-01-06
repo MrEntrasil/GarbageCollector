@@ -20,11 +20,11 @@ class GarbageCollector {
         }
     };
     ~GarbageCollector(){
-        std::cout << "Liberando memoria alocada..." << "\n";
+        std::cout << "Releasing allocated memory." << "\n";
         for (auto& [ptr, size] : this->memory){
             free(ptr);
         }
         this->memory.clear();
-        std::cout << "Memoria liberada.";
+        std::cout << "Memory released.";
     }
 };
