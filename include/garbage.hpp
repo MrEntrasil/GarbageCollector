@@ -5,7 +5,7 @@
 typedef std::unordered_map<void*, size_t> GarbageMemory;
 
 class GarbageCollector {
-    protected:
+    private:
     GarbageMemory memory;
     public:
     void* allocate(size_t size){

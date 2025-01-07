@@ -1,2 +1,2 @@
 all:
-	g++ -o teste.exe src/main.cpp
+	g++ -o teste.exe src/main.cpp -Iinclude
