@@ -4,8 +4,10 @@
 
 int main(void){
     GarbageCollector gc;
-    std::string* ptr = (std::string*)gc.allocate(sizeof(int));
-    *ptr = "asasas";
-    std::cout << "Valor: " << *ptr << "\n";
+    int* a = (int*)gc.allocate<int>();
+
+    std::cout << a << "\n";
+    gc.deallocate<int>(a);
+
     return EXIT_SUCCESS;
 }
