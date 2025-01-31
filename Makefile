@@ -1,2 +1,5 @@
+INPUT=src/main.cpp
+OUTPUT=teste.exe
+
 all:
-	g++ -o teste.exe src/main.cpp -Iinclude
+	g++ -o $(OUTPUT) $(INPUT)

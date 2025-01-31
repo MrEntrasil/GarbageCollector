@@ -1,13 +1,12 @@
 #include <iostream>
-#include <string>
-#include <garbage.hpp>
+#include "../garbage.hpp"
 
 int main(void){
     GarbageCollector gc;
-    int* a = (int*)gc.allocate<int>();
+    int* a = (int*)gc.allocate(sizeof(int*));
+    *a = 54;
+    printf("%d\n", *a);
+    gc.deallocate(a);
 
-    std::cout << a << "\n";
-    gc.deallocate<int>(a);
-
-    return EXIT_SUCCESS;
+    return 0;
 }
